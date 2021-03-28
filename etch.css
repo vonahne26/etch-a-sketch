@@ -1,0 +1,15 @@
+#container {
+    border-style: solid;
+    display: grid;
+    height: 700px;
+    width: 700px;
+}
+
+.grid-box {
+    
+    display: flex;
+}
+
+.color {
+    background-color: black;
+}
