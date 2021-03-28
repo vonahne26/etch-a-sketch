@@ -1,0 +1,1 @@
+Project as part of the Odin Project. Assignment found here: https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project
