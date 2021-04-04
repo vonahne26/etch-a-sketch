@@ -10,9 +10,22 @@ function createGrid(number){
     }
 };
 
+function resetGrid() {
+    gridItem.forEach((item) =>{
+       container.removeChild(item);
+    });
+};
+
 const container = document.querySelector('#container');
 
 createGrid(16);
+
+const button = document.getElementById('submit');
+value = button.form.grid.value;
+button.addEventListener('click', () => {
+    resetGrid();
+    createGrid(value);   
+});
 
 const gridItem = document.querySelectorAll('.grid-box');
 gridItem.forEach((item) =>{
@@ -20,5 +33,3 @@ gridItem.forEach((item) =>{
         item.classList.toggle('color');
     });
 });
-
-
