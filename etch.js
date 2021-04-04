@@ -1,5 +1,4 @@
 function createGrid(number){
-    const container = document.querySelector('#container');
     container.style.gridTemplateColumns = `repeat(${number}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${number}, 1fr)`;
     for(i = 0; i < number; i++){  
@@ -12,7 +11,7 @@ function createGrid(number){
 };
 
 function resetGrid() {
-    const container = document.querySelector('#container');
+    
     let gridItem = document.querySelectorAll('.grid-box');
     gridItem.forEach((item) =>{
        container.removeChild(item);
@@ -27,14 +26,14 @@ function addDrawing(){
         });
     });
 }
-
+const container = document.querySelector('#container');
 createGrid(16);
 
 addDrawing();
 
-const button = document.getElementById('submit');
-value = button.form.grid.value;
+let button = document.getElementById('submit');
 button.addEventListener('click', () => {
+    let value = button.form.grid.value;
     resetGrid();
     createGrid(value);   
     addDrawing();
